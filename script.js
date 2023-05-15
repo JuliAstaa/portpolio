@@ -11,3 +11,7 @@ document.addEventListener('click', (e)=>{
     }
 });
 
+const link = navbar.querySelector('.link')
+link.addEventListener('click', (e)=>{
+    navbar.classList.remove('active');
+});
