@@ -1,0 +1,687 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Noto+Serif+Balinese&family=Nunito:wght@300&family=Open+Sans:ital,wght@1,300;1,500&family=Roboto:wght@500&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F6F1E9;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #F6F1E9;
+}
+
+.logo {
+    display: flex;
+    margin: 20px;
+    margin-left: 50px;
+    width: 20%;
+}
+
+.logoImage img{
+    border-radius: 50%;
+    border: 2px solid #4F200D;
+}
+
+.logoTitle{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.logoTitle p {
+    font-size: 30px;
+    color: #4F200D;
+}
+
+.navbar {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    margin-right: 50px;
+}
+
+.hamburger-menu span{
+    border: 2px solid #4F200D;
+    border-radius: 3px;
+    width: 25px;
+}
+
+.hamburger-menu {
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #4F200D;
+    border-radius: 5px;
+    width: 35px;
+    height: 30px;
+    display: none;
+}
+
+.ul {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.ul li {
+    list-style: none;
+}
+
+.ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #4F200D;
+}
+
+.ul .link {
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.ul .link::after {
+    content: '';
+    position: absolute;
+    z-index: 999;
+    height: 5px;
+    bottom: 0;
+    padding-bottom: 3px;
+    left: 0px;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(45deg,#FF8400, #FFD93D);
+    border-image-slice: 1;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+    transform: scaleX(0);
+}
+
+.ul .link:hover::after{
+    width: 100%;
+    transform: scaleX(1);
+}
+
+.ul li a:hover {
+    color: #FF8400;
+}
+
+.ul li .active{
+    color: red;
+}
+
+.ul .active::before{
+    content: '';
+    width: 100%;
+    position: absolute;
+    z-index: 999;
+    height: 5px;
+    bottom: 0;
+    padding-bottom: 3px;
+    left: 0px;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(45deg,orange, red, yellow);
+    border-image-slice: 1;
+}
+
+/* Hero */
+
+.hero {
+    background-image: url(img/bg-hero.png);
+    width: 100%;
+    height: 550px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.heroText {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-left: 10%;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.button {
+    margin-top: 10px;
+    width: 100px;
+    height: 30px;
+    background-color: #FF8400;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #4F200D;
+    color: #F6F1E9;
+}
+
+.heroText span {
+    color: #FF8400;
+}
+
+.heroText .paragraph {
+    color: #434242;
+}
+
+.heroText h2 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* About Me */
+
+.aboutMe {
+    margin-top: 200px;
+}
+
+.aboutMeTitle h3 {
+    margin-left: 100px;
+    color: #FF8400;
+}
+
+.aboutMeBody {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px;
+    margin-top: 20px;
+    gap: 100px;
+    text-align: justify;
+}
+
+.aboutMeText{
+    width: 50%;
+    margin-right: 30px;
+}
+
+.aboutMeText p{
+    color: #434242;
+}
+
+.aboutMeSocmed .socmedIcon {
+    display: flex;
+    margin-top: 10px;
+    gap: 15px;
+    list-style: none;
+    font-size: 25px;
+}
+
+.aboutMeSocmed p {
+    color: #434242;
+}
+
+
+.aboutMeSocmed .socmedLink {
+    border-radius: 50%;
+    border: 1px solid #FF8400;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #FF8400;
+    color: #4F200D;
+    width: 35px;
+    height: 35px;
+}
+
+.aboutMe .socmedLink:hover {
+    background-color: #4F200D;
+    border: 1px solid #4F200D;
+    border-radius: 50%;
+    color: #F6F1E9;
+}
+
+/* Project */
+
+.project {
+    background-color: #FFD93D;
+    margin-top: 200px;
+    border: 1px solid transparent;
+}
+
+
+.projectTitle h3 {
+    text-align: center;
+    color: #FF8400;
+    padding: 40px;
+}
+
+.projectTitle {
+    margin: 0px 100px 100px 100px;
+}
+
+.projectBody {
+    /* margin: auto; */
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.theProject {
+    cursor: pointer;
+    text-align: justify;
+    width: 45%;
+    border-radius: 20px;
+    gap: 100px;
+    margin-bottom: 100px;
+    background-color: white;
+    box-shadow: 10px 10px 10px #FF8400;
+}
+
+.theProject:hover {
+    width: 46%;
+}
+
+.theProject img {
+    width: 100%;
+}
+
+.projectImage {
+    margin: 20px;
+}
+
+.projectExplanation {
+    margin: 20px;
+}
+
+.projectExplanation p {
+    color: #434242;
+}
+
+
+/* footer */
+
+.footer {
+    background-color: #4F200D;
+    border: 1px solid transparent;
+}
+
+.footerBody {
+    padding-top: 100px;
+    width: 80%;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    gap: 1%;
+    padding-bottom: 100px;
+}
+
+.footerBody h3 {
+    color: #FF8400;
+}
+
+.footerBody p {
+    color: #FFD93D;
+}
+
+.footerBody a {
+    color: #FFD93D;
+    text-decoration: none;
+}
+
+.footerBody a:hover {
+    color: #FF8400;
+}
+
+
+.footerBody .footerAboutMe {
+    width: 33%;
+}
+.footerBody .footerMenu {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+}
+.footerBody .footerSocmed {
+    width: 33%;
+}
+
+.footerBody .footerSocmed .socmedIcon {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    font-size: 25px;
+}
+
+.copyright {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    border-top: 2px solid #FF8400;
+    padding: 30px;
+    color: #FF8400;
+}
+
+
+
+/* Home arrow */
+
+.homeArrow {
+    z-index: 999;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+.homeArrow .homeButton {
+    background-color: #FF8400;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.homeArrow .homeButton button{
+    background-color: #FF8400;
+    border: none;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* Resposive */
+
+/* Laptop */
+@media (max-width: 1366px){
+    html {
+        font-size: 85%;
+    }
+
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    * {
+        overflow-x: hidden;
+    }
+
+    html {
+        font-size: 80%;
+    } 
+
+    .logo {
+        display: flex;
+        margin: 20px;
+        margin-left: 50px;
+        width: 30%;
+    }
+    
+    .logoImage img{
+        border-radius: 50%;
+        border: 2px solid #4F200D;
+    }
+    
+    .logoTitle{
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+    }
+    
+    .logoTitle p {
+        font-size: 30px;
+        color: #4F200D;
+    }
+
+    .hamburger-menu span{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #4F200D;
+        border-radius: 3px;
+        width: 25px;
+    }
+    
+    .hamburger-menu {
+        cursor: pointer;
+        margin: 25px;
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #4F200D;
+        border-radius: 5px;
+        width: 45px;
+        height: 40px;
+    }
+
+    .heroText {
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+        margin-left: 10%;
+        text-align: justify;
+        font-size: 20px;
+    }
+
+    .aboutMeBody {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 100px;
+        margin-top: 20px;
+        gap: 100px;
+        text-align: justify;
+    }
+
+    .aboutMeText{
+        width: 100%;
+        margin-right: 30px;
+    }
+
+    .theProject {
+        cursor: pointer;
+        text-align: justify;
+        width: 98%;
+        margin-bottom: 30px;
+        border-radius: 20px;
+        background-color: white;
+        box-shadow: 10px 10px 10px #FF8400;
+    }
+
+    .theProject:hover {
+        width: 99%;
+    }
+
+
+    .footerBody {
+        padding-top: 100px;
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        justify-content: space-between;
+        gap: 1%;
+        padding-bottom: 100px;
+    }
+    
+    .navbar {
+        position: absolute;
+        top: 90px;
+        background-color: #F3EFE0;
+        height: 90vh;
+        width: 350px;
+        margin: 0;
+        right: -100%;
+        transition: 0.8s;
+    }
+
+    .navbar.active {
+        right: 0;
+    }
+
+    .navbar .ul {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: start;
+    }
+
+    .ul .link {
+        position: relative;
+        width: fit-content;
+        display: flex;
+        margin-left: 50px;
+        margin-top: 50px;
+    }
+    
+    .ul .link::after {
+        content: '';
+        position: absolute;
+        z-index: 999;
+        height: 5px;
+        bottom: 0;
+        padding-bottom: 3px;
+        left: 0px;
+        border-bottom: 2px solid transparent;
+        border-image: linear-gradient(45deg,#FF8400, #FFD93D);
+        border-image-slice: 1;
+        transition: 0.3s;
+        transition-timing-function: ease-in-out;
+        transform: scaleX(0);
+    }
+    
+    .ul .link:hover::after{
+        width: 100%;
+        transform: scaleX(1);
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 65%;
+    }
+
+    .logo {
+        display: flex;
+        margin: 20px;
+        margin-left: 50px;
+        width: 50%;
+    }
+
+    .logoTitle p {
+        font-size: 20px;
+        color: #4F200D;
+    }
+
+    .heroText {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+        margin-left: 10%;
+        text-align: justify;
+        font-size: 15px;
+    }
+
+    .aboutMeTitle h3 {
+        margin-left: 25px;
+        color: #FF8400;
+    }
+    
+    .aboutMeBody {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 25px;
+        text-align: justify;
+    }
+    .aboutMeText{
+        margin-right: 0px;
+    }
+
+    .theProject {
+        cursor: pointer;
+        text-align: justify;
+        width: 100%;
+        border-radius: 20px;
+        background-color: white;
+        box-shadow: 10px 10px 10px #FF8400;
+    }
+
+    .projectBody {
+        margin: auto;
+        width: 100%;
+        display: flex;
+        gap: 100px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .projectTitle {
+        margin: 0px 25px 25px 25px;
+    }
+
+    .theProject {
+        cursor: pointer;
+        text-align: justify;
+        width: 96%;
+        margin-bottom: 30px;
+        border-radius: 20px;
+        background-color: white;
+        box-shadow: 10px 10px 10px #FF8400;
+    }
+
+    .theProject:hover {
+        width: 97%;
+    }
+
+    .footerBody {
+        padding-top: 100px;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        justify-content: space-between;
+        gap: 50px;
+        padding-bottom: 100px;
+    }
+
+    .footerBody .footerAboutMe {
+        width: 100%;
+    }
+    .footerBody .footerMenu {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .footerBody .footerSocmed {
+        width: 100%;
+    }
+    
+    
+}
+
+
+@keyframes animate {
+    0% {
+        filter: brightness(0%);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+    
+}
