@@ -9,10 +9,10 @@ html {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 body {
+    overflow-x: hidden;
     font-family: 'Roboto', sans-serif;
     background-color: #F6F1E9;
 }
@@ -415,10 +415,10 @@ body {
 
 /* Tablet */
 @media (max-width: 768px) {
-    * {
+    body {
         overflow-x: hidden;
     }
-
+    
     html {
         font-size: 80%;
     } 
@@ -520,17 +520,28 @@ body {
     
     .navbar {
         position: absolute;
+        display: none;
         top: 90px;
         background-color: #F3EFE0;
         height: 90vh;
         width: 350px;
         margin: 0;
+        z-index: -1;
         right: -100%;
         transition: 0.8s;
     }
-
+    
     .navbar.active {
+        position: absolute;
+        display: flex;
+        top: 90px;
+        background-color: #F3EFE0;
+        height: 90vh;
+        width: 350px;
+        margin: 0;
         right: 0;
+        z-index: 999;
+        transition: 0.8s;
     }
 
     .navbar .ul {
