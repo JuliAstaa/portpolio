@@ -140,12 +140,9 @@ body {
 /* Hero */
 
 .hero {
-    background-image: url(img/bg-hero.png);
+    background-color: white;
     width: 100%;
     height: 550px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     display: flex;
     align-items: center;
 }
@@ -153,7 +150,7 @@ body {
 .heroText {
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 50%;
     margin-left: 10%;
     text-align: justify;
     font-size: 20px;
@@ -416,7 +413,7 @@ body {
 /* Tablet */
 @media (max-width: 768px) {
     body {
-        overflow-x: hidden;
+        width: 100%;
     }
     
     html {
@@ -468,11 +465,36 @@ body {
         height: 40px;
     }
 
+    .bg-hero img{
+        width: 60%;
+    }
+
+    .bg-hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+
+    .hero {
+        background-color: white;
+        width: 100%;
+        height: 550px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
     .heroText {
         display: flex;
         flex-direction: column;
-        width: 300px;
-        margin-left: 10%;
+        width: 100%;
+        margin-right: 25%;
+        margin-left: 25%;
+        padding-left: 12%;
+        padding-right: 17%;
         text-align: justify;
         font-size: 20px;
     }
@@ -598,13 +620,20 @@ body {
         color: #4F200D;
     }
 
+    .bg-hero img {
+        width: 75%;
+    }
+
+
     .heroText {
         display: flex;
         flex-direction: column;
-        width: 250px;
-        margin-left: 10%;
+        width: 100%;
         text-align: justify;
         font-size: 15px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        padding: 5%;
     }
 
     .aboutMeTitle h3 {
